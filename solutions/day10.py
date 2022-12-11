@@ -7,7 +7,7 @@ def main() -> None:
     register_states = determine_register_states(_input)
 
     print(f"Part one: {sum(register_states[i - 1] * i for i in range(20, 221, 40))}")
-    print(f"Part two:\n{part_two(register_states)}")  # PLGFKAZG
+    print(f"Part two:\n{part_two(register_states)}")  # answer: PLGFKAZG
 
 
 def determine_register_states(_input: list[str]) -> list[int]:
