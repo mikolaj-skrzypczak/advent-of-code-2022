@@ -74,7 +74,7 @@ def create_monkeys(clean_input: list[str]) -> list[Monkey]:
             x * (x if second_number == 'old' else int(second_number)) if operator == '*' else \
             x + (x if second_number == 'old' else int(second_number)) if operator == '+' else None
 
-    def extract_test() -> int:
+    def extract_mod() -> int:
         return int(curr_monkey_lines[2].split(" ")[-1])
 
     def extract_to_whom_if_true() -> int:
@@ -89,7 +89,7 @@ def create_monkeys(clean_input: list[str]) -> list[Monkey]:
         monkeys.append(Monkey(
             extract_items(),
             extract_operation(),
-            extract_test(),
+            extract_mod(),
             extract_to_whom_if_true(),
             extract_to_whom_if_false(),
             monkeys
