@@ -15,10 +15,6 @@ def solve(encrypted_data: list[int], decryption_key: int = 1, mixin_rounds: int 
         for original_index, value in enumerate(encrypted_data):
             moved_index = original_indexes_and_values.index((original_index, value))
             move_to_index = (moved_index + value) % (len(encrypted_data) - 1)
-
-            if move_to_index == 0:
-                move_to_index = len(encrypted_data) - 1
-
             original_indexes_and_values.insert(move_to_index, original_indexes_and_values.pop(moved_index))
 
     encrypted = [v for _, v in original_indexes_and_values]
